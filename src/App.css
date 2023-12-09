@@ -27,14 +27,7 @@ button{
 }
 
 
-#pokemons-list-container{
-  display: flex;
-  justify-content:center;
-  flex-wrap: wrap;
-  flex-flow: wrap row;
-  width: 65%;
 
-}
 
 #pokemon-detail{
   display: flex;
@@ -43,8 +36,12 @@ button{
   width: 25%;
 
 }
-
-#pokemon-show-list{
+.pokemons-list-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: wrap row;
+}
+.pokemon-show-card{
   margin: 10px;
   height: 80%;
   width: 150px;
@@ -55,6 +52,21 @@ button{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition-property: transform,box-shadow,background-size,opacity,width,height;
+  transition-timing-function: ease-in-out;
+  transition-duration: .4s;
+  opacity: 1;
+}
+.pokemon-show-card.isHidden{
+  transform: rotate(360deg);
+  /* transform: translateY(100px); */
+  /* background: ; */
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  margin: 0px;
 
 }
 
