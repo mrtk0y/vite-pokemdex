@@ -2,7 +2,7 @@ import PokemonItem from "./PokemonItem.jsx"
 
 const PokemonList = ({ pokemons, searchInput }) => {
   return (
-    <div className='flex flex-wrap'>
+    <div className='grid grid-cols-8 gap-2'>
       {pokemons.map((pokemon) => (
         <PokemonItem
           isShow={pokemon.name.includes(searchInput)}

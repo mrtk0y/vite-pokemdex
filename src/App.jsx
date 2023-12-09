@@ -115,34 +115,30 @@ function App() {
     [],
   )
 
-
-
-
   return isLoading ? (
     <p>Loading...</p>
   ) : (
-    <>
+    <div className="bg-indigo-300">
       {/* TODO: BEGIN Pokemon/Search component */}
-      <div className="flex flex-col items-center text-3xl">
-        <form action="" onChange={handleInputChange} className="relative right-48">
-          <label htmlFor="input-search"></label>
-          <input id="input-search" className="p-3 text-2xl border-2 border-solid rounded-lg w-96" type="text" placeholder="Search Pokemon" />
-          <button className="p-3 border-2 border-solid rounded-lg bg-gray-400 text-xl">Search</button>
+      <div className="pt-4 mb-4">
+        <form action="" onChange={handleInputChange} className="text-xl flex justify-center gap-4">
+          <input type="text" placeholder="Search Pokemon" className="input input-bordered w-full max-w-xs" />
+          <button className="btn">Search</button>
         </form>
+        {errors && (
+          <div id="errors">
+            {errors.map((error) => (
+              <p key={error.id} className="text-red-400">
+                {error.message}
+              </p>
+            ))}
+          </div>
+        )}
       </div>
-      {errors && (
-        <div id="errors">
-          {errors.map((error) => (
-            <p key={error.id} className="text-red-400">
-              {error.message}
-            </p>
-          ))}
-        </div>
-      )}
       {/* TODO: END Pokemon/Search component */}
 
       <PokemonList pokemons={pokemons} searchInput={inputValue} />
-    </>
+    </div>
   );
 }
 
