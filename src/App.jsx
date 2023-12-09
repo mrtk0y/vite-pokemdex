@@ -1,7 +1,6 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./App.css";
-import PokemonItem from "./components/PokemonItem";
-import debounce from "./components/useDebounceInput";
+import PokemonItem from "./components/Pokemon/PokemonItem.jsx"
 
 // Move this function to a utility module (file)
 const sortArrayAscendingById = (array) =>
