@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import PokemonItem from "./components/Pokemon/PokemonItem.jsx"
 import sortArrayByProperty from "./utilities/array/sortByProperty.js"
+import PokemonList from "./components/Pokemon/PokemonList.jsx"
 
 // TODO: Move this function to a utility module (file)
 const fetchData = async (url) => {
@@ -140,18 +141,7 @@ function App() {
       )}
       {/* TODO: END Pokemon/Search component */}
 
-      <div className='flex flex-wrap'>
-        {pokemons.map((pokemon) => (
-          <PokemonItem
-            isShow={pokemon.name.includes(inputValue)}
-            key={pokemon.id}
-            imageUrl={pokemon.imageUrl}
-            id={pokemon.id}
-            name={pokemon.name}
-            typeNames={pokemon.typeNames}
-          />
-        ))}
-      </div>
+      <PokemonList pokemons={pokemons} searchInput={inputValue} />
     </>
   );
 }
