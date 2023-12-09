@@ -127,26 +127,26 @@ function App() {
     <p>Loading...</p>
   ) : (
     <>
-      <div id="search-pokemon">
-        <form action="" onChange={handleInputChange}>
-
+      {/* TODO: BEGIN Pokemon/Search component */}
+      <div className="flex flex-col items-center text-3xl">
+        <form action="" onChange={handleInputChange} className="relative right-48">
           <label htmlFor="input-search"></label>
-          <input type="text" id="input-search" placeholder="Search Pokemon" />
-          <button>Search</button>
+          <input id="input-search" className="p-3 text-2xl border-2 border-solid rounded-lg w-96" type="text" placeholder="Search Pokemon" />
+          <button className="p-3 border-2 border-solid rounded-lg bg-gray-400 text-xl">Search</button>
         </form>
       </div>
       {errors && (
         <div id="errors">
           {errors.map((error) => (
-            <p key={error.id} className="text-red">
+            <p key={error.id} className="text-red-400">
               {error.message}
             </p>
           ))}
         </div>
       )}
+      {/* TODO: END Pokemon/Search component */}
 
-
-      <div className='pokemons-list-container'>
+      <div className='flex flex-wrap'>
         {pokemons.map((pokemon) => (
           <PokemonItem
             isShow={pokemon.name.includes(inputValue)}
@@ -158,8 +158,6 @@ function App() {
           />
         ))}
       </div>
-
-      <div id="pokemon-detail"></div>
     </>
   );
 }

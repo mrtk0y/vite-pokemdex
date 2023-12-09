@@ -1,143 +1,18 @@
-body{
-  background: rgb(112, 121, 162);
-}
-
-form{
-  position: relative ;right: 200px;
-}
-
-
-input{
-  padding: 15px;
-  font-size: 20px;
-  border: 2px solid;
-  border-radius: 10px;
-  width: 600px;
-
-}
-button{
-  padding: 15px;
-  margin-top: 10px;
-  border: 2px solid;
-  border-radius: 10px;
-  background: gray;
-  font-size: 20px;
-
-
-}
-
-
-
-
-#pokemon-detail{
-  display: flex;
-  justify-content:center;
-  position:fixed; top:10px; right: 100px;
-  width: 25%;
-
-}
-.pokemons-list-container{
-  display: flex;
-  flex-wrap: wrap;
-  flex-flow: wrap row;
-}
-.pokemon-show-card{
-  margin: 10px;
-  height: 80%;
-  width: 150px;
-  border-radius: 10px;
-  background: white;
-  text-transform:capitalize;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* TODO: convert remaining css */
+/*.pokemon-show-card{
   transition-property: transform,box-shadow,background-size,opacity,width,height;
   transition-timing-function: ease-in-out;
   transition-duration: .4s;
   opacity: 1;
-}
-.pokemon-show-card.isHidden{
-  transform: rotate(360deg);
-  /* transform: translateY(100px); */
-  /* background: ; */
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  pointer-events: none;
-  opacity: 0;
-  margin: 0px;
+}*/
 
-}
-
-
-#pokemon-show-detail{
-  margin: 10px;
-  height: 400px;
-  width: 300px;
-  border-radius: 10px;
-  background: white;
-  text-transform:capitalize;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-
-
-
-#pokemon-type{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  text-transform:capitalize;
-  margin-bottom: 15px;
-
-
-}
-
-.pokemon-type{
-  background-color: rgb(161, 193, 161);
-  border-radius: 5px;
-  width: 60px;
-  height: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin: 5px;
-}
-
-.open {
-      visibility:hidden
-}
-
-
-#search-pokemon{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 30px;
-
-}
-
-#show-pokemon-search{
-  height: 400px;
-  width: 300px;
-  border-radius: 10px;
-  background: white;
-  text-transform:capitalize;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 10px;
-
-
-}
-
-.text-red {
-  color: red;
-}
+/* TODO: convert remaining css */
+/*.pokemon-show-card.isHidden{*/
+/*  transform: rotate(360deg);*/
+/*  width: 0;*/
+/*  height: 0;*/
+/*  overflow: hidden;*/
+/*  pointer-events: none;*/
+/*  opacity: 0;*/
+/*  margin: 0;*/
+/*}*/
