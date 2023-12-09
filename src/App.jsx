@@ -1,14 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import PokemonItem from "./components/Pokemon/PokemonItem.jsx"
+import sortArrayByProperty from "./utilities/array/sortByProperty.js"
 
-// Move this function to a utility module (file)
-const sortArrayAscendingById = (array) =>
-  array.sort((a, b) => {
-    a.id - b.id;
-  });
-
-// Move this function to a utility module (file)
+// TODO: Move this function to a utility module (file)
 const fetchData = async (url) => {
   let data;
   let errors = [];
@@ -79,7 +74,7 @@ function App() {
       }
     }
 
-    const sortedPokemons = sortArrayAscendingById(rawPokemons);
+    const sortedPokemons = sortArrayByProperty({ originalArray: rawPokemons, property: 'id' });
     const transformedPokemons = sortedPokemons.map(
       (sortedPokemon) =>
         new Pokemon(
